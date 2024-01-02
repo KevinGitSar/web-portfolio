@@ -1,9 +1,15 @@
+'use client';
+
 import Image from 'next/image';
 import NavigationBar from './components/NavigationBar';
 import ProjectButton from './components/ProjectButton';
 import ProjectSection from './components/ProjectSection';
+import { useState } from 'react';
 
 export default function Home() {
+
+  const [togglePDF, setTogglePDF] = useState(false);
+
   return (
     <main>
       <NavigationBar></NavigationBar>
@@ -11,8 +17,8 @@ export default function Home() {
       {/* Landing Page */}
       <div id='home' className='min-h-screen flex flex-col justify-center border-[5px] border-[#1D2233]'>
         <div className='text-center h-1/2 flex flex-col justify-center'>
-          <h1 className='text-3xl'>Hi, my name is <span className='font-semibold text-[#379683]'>Kevin Sar</span></h1>
-          <h1 className='text-xl mt-5'>and I'm a <span className='font-semibold text-[#379683]'>Full Stack Developer</span>.</h1>
+          <h1 className='text-3xl'>Hi, my name is <span className='font-semibold text-[#3FAA95]'>Kevin Sar</span></h1>
+          <h1 className='text-xl mt-5'>and I'm a <span className='font-semibold text-[#3FAA95]'>Full Stack Developer</span>.</h1>
 
           <div className='flex justify-between w-1/2 mx-auto py-5'>
             <div className='p-2 rounded transition ease-in-out delay-100 hover:scale-125'>
@@ -30,7 +36,7 @@ export default function Home() {
       </div>
 
       {/* About Me Page */}
-      <div id='about' className='min-h-screen flex flex-col justify-center border-[5px] border-[#1D2233] bg-[#1D2233]'>
+      <div id='about' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#1D2233]'>
         <div className='text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
           <h2 className='text-2xl font-semibold'>About me.</h2>
         </div>
@@ -40,24 +46,24 @@ export default function Home() {
       </div>
 
       {/* Project Buttons */}
-      <div id='projects' className='min-h-screen flex flex-col justify-center border-[5px] border-[#1D2233] bg-[#1D2233]'>
+      <div id='projects' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#1D2233]'>
 
-        <div className='text-center p-5 m-1 border-[10px] border-[#1D2233]'>
+        <div className='text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
           <h2 className='text-2xl font-semibold'>My Projects</h2>
         </div>
         
-        <ProjectButton title={'PreprLabs Web Dev Challenges'} link={'#project-pl'} mainImage={'/images/pl-images/challenge-1-clone-page.png'} image1={'/icons/react-logo.png'} image2={'/icons/mongodb-logo.png'} image3={'/icons/redux-logo.png'} image4={'/icons/tailwind-logo.png'} borderColor={'#1D2233'} bgColor={'#0A0F22'} hover={'#379683'}></ProjectButton>
+        <ProjectButton title={'PreprLabs Web Dev Challenges'} link={'#project-pl'} mainImage={'/images/pl-images/challenge-1-clone-page.png'} image1={'/icons/react-logo.png'} image2={'/icons/mongodb-logo.png'} image3={'/icons/redux-logo.png'} image4={'/icons/tailwind-logo.png'} borderColor={'#1D2233'} bgColor={'#0A0F22'} hover={'#3FAA95'}></ProjectButton>
 
-        <ProjectButton title={'Rate My Cut'} link={'#project-rmc'} mainImage={'/images/rmc-images/rmc-main.png'} image1={'/icons/vue-logo.png'} image2={'/icons/laravel-logo.png'} image3={'/icons/digitalocean-logo.png'} image4={'/icons/mysql-logo.png'} borderColor={'#1D2233'} bgColor={'#0A0F22'} hover={'#379683'}></ProjectButton>
+        <ProjectButton title={'Rate My Cut'} link={'#project-rmc'} mainImage={'/images/rmc-images/rmc-main.png'} image1={'/icons/vue-logo.png'} image2={'/icons/laravel-logo.png'} image3={'/icons/digitalocean-logo.png'} image4={'/icons/mysql-logo.png'} borderColor={'#1D2233'} bgColor={'#0A0F22'} hover={'#3FAA95'}></ProjectButton>
         
-        <ProjectButton title={'Meapp'} link={'#project-ma'} mainImage={'/images/ma-images/meapp-landing-page-2.png'} image1={'/icons/java-logo.png'} image2={'/icons/android-logo.png'} image3={'/icons/stream-logo.png'} image4={'/icons/sqlite-logo.png'} borderColor={'#1D2233'} bgColor={'#0A0F22'} hover={'#379683'}></ProjectButton>
+        <ProjectButton title={'Meapp'} link={'#project-ma'} mainImage={'/images/ma-images/meapp-landing-page-2.png'} image1={'/icons/java-logo.png'} image2={'/icons/android-logo.png'} image3={'/icons/stream-logo.png'} image4={'/icons/sqlite-logo.png'} borderColor={'#1D2233'} bgColor={'#0A0F22'} hover={'#3FAA95'}></ProjectButton>
 
-        <ProjectButton title={'Prime Time Gaming'} link={'#project-ptg'} mainImage={'/images/ptg-images/prime-time-gaming-main-page.png'} image1={'/icons/react-logo.png'} image2={'/icons/bootstrap-logo.png'} image3={'/icons/javascript-logo.png'} image4={'/icons/netlify-logo.png'} borderColor={'#1D2233'} bgColor={'#0A0F22'} hover={'#379683'}></ProjectButton>
+        <ProjectButton title={'Prime Time Gaming'} link={'#project-ptg'} mainImage={'/images/ptg-images/prime-time-gaming-main-page.png'} image1={'/icons/react-logo.png'} image2={'/icons/bootstrap-logo.png'} image3={'/icons/javascript-logo.png'} image4={'/icons/netlify-logo.png'} borderColor={'#1D2233'} bgColor={'#0A0F22'} hover={'#3FAA95'}></ProjectButton>
 
       </div>
 
       {/* PreprLabs Project Section */}
-      <div id='project-pl' className='min-h-screen flex flex-col justify-center border-[5px] border-[#1D2233]'>
+      <div id='project-pl' className='min-h-screen flex flex-col justify-evenly border-[5px] border-[#1D2233]'>
         <div className='text-center p-5 m-1'>
             <h2 className='text-2xl font-semibold'>PreprLabs Web Dev Challenges</h2>
         </div>
@@ -109,7 +115,7 @@ export default function Home() {
       </div>
 
       {/* Rate My Cut Project Section */}
-      <div id='project-rmc' className='min-h-screen flex flex-col justify-center border-[5px] border-[#1D2233]'>
+      <div id='project-rmc' className='min-h-screen flex flex-col justify-evenly border-[5px] border-[#1D2233]'>
         <div className='text-center p-5 m-1'>
             <h2 className='text-2xl font-semibold'>Rate My Cut</h2>
         </div>
@@ -155,14 +161,14 @@ export default function Home() {
                   <li>Application Server set-up with Linux OS.</li>
                   <li>HTTPS/SSL/DNS Configuration.</li>
                   <li>Hosted and Deployed with Digital Ocean.</li>
-                  <li>Check it out on <a href='https://kevinsar.ca/' target='_blank' className='transition ease-in-out delay-100 hover:text-[#379683]'>kevinsar.ca</a>.</li>
+                  <li>Check it out on <a href='https://kevinsar.ca/' target='_blank' className='transition ease-in-out delay-100 hover:text-[#3FAA95]'>kevinsar.ca</a>.</li>
                 </ul>
             </div>
         </div>
       </div>
 
       {/* MeApp Project Section */}
-      <div id='project-ma' className='min-h-screen flex flex-col justify-center border-[5px] border-[#1D2233]'>
+      <div id='project-ma' className='min-h-screen flex flex-col justify-evenly border-[5px] border-[#1D2233]'>
         <div className='text-center p-5 m-1'>
             <h2 className='text-2xl font-semibold'>MeApp</h2>
         </div>
@@ -193,7 +199,7 @@ export default function Home() {
       </div>
 
       {/* Prime Time Gaming Project Section */}
-      <div id='project-ptg' className='min-h-screen flex flex-col justify-center border-[5px] border-[#1D2233]'>
+      <div id='project-ptg' className='min-h-screen flex flex-col justify-evenly border-[5px] border-[#1D2233]'>
         <div className='text-center p-5 m-1'>
             <h2 className='text-2xl font-semibold'>Prime Time Gaming</h2>
         </div>
@@ -217,10 +223,133 @@ export default function Home() {
                   <li>React Hooks used to implement timer-countdown feature.</li>
                   <li>Teaches users about prime numbers especially why 1 is not a prime number and why 2 is a prime number.</li>
                   <li>Netlify was used to deploy the project.</li>
-                  <li>Check it out on <a href='https://prime-time-gaming.netlify.app/' className='transition ease-in-out delay-100 hover:text-[#379683]'>prime-time-gaming.netlify.app</a>.</li>
+                  <li>Check it out on <a href='https://prime-time-gaming.netlify.app/' className='transition ease-in-out delay-100 hover:text-[#3FAA95]'>prime-time-gaming.netlify.app</a>.</li>
                 </ul>
             </div>
         </div>
+      </div>
+
+      {/* Skills Section */}
+      <div id='skills' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#1D2233]'>
+
+        <div className='text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
+          <h2 className='text-2xl font-semibold'>My Skills</h2>
+        </div>
+        
+        <div className='mx-1'>
+
+          <div className='flex'>
+            <div className='w-1/2 text-center p-5 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
+              <h3 className='text-xl font-semibold'>Frontend</h3>
+              <ul className='text-start mt-4'>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+                <li>React</li>
+                <li>Vue</li>
+                <li>TailwindCSS</li>
+                <li>Bootstrap</li>
+              </ul>
+            </div>
+
+            <div className='w-1/2 text-center p-5 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
+              <h3 className='text-xl font-semibold'>Backend</h3>
+              <ul className='text-start mt-4'>
+                <li>PHP</li>
+                <li>Laravel</li>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+                <li>Redis</li>
+                <li>NodeJS</li>
+                <li>ExpressJS</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className='flex justify-evenly'>
+            <div className='w-1/2 text-center p-5 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
+              <h3 className='text-xl font-semibold'>Tools</h3>
+              <ul className='text-start mt-4'>
+                <li>Github</li>
+                <li>Git</li>
+                <li>VS Code</li>
+                <li>Android Studio</li>
+                <li>IntelliJ</li>
+              </ul>
+            </div>
+
+            <div className='w-1/2 text-center p-5 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
+              <h3 className='text-xl font-semibold'>Exploring</h3>
+              <ul className='text-start mt-4'>
+                <li>Flutter</li>
+                <li>Java</li>
+                <li>C#</li>
+                <li>ASP.NET</li>
+                <li>Python</li>
+                <li>Unity</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Resume Section */}
+      <div id='resume' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#1D2233]'>
+
+        <div className='flex-none text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
+          <h2 className='text-2xl font-semibold'>My Resume</h2>
+        </div>
+
+
+        <div className='flex-none text-center mt-4'>
+          <a href='/downloads/Kevin_Sar_-_Resume_2024.pdf' download>
+          <button className='px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]'>Resume PDF Download</button>
+          </a>
+        </div>
+
+        <div className='flex-none text-center my-4'>
+          <button className='px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' onClick={()=>{setTogglePDF(!togglePDF)}}>View Resume PDF</button>
+        </div>
+
+        <div className={togglePDF ? 'grow overflow-hidden transition-all ease-in-out delay-100 opacity-100 visible' : 'transition-all ease-in-out delay-100 opacity-0 invisible'}>
+          <iframe src='/downloads/Kevin_Sar_-_Resume_2024.pdf' className='w-full h-[75vh] overflow-hidden ' ></iframe>
+        </div>
+      </div>
+
+      <div id='contact' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#1D2233]'>
+
+        <div className='flex-none text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
+          <h2 className='text-2xl font-semibold'>Contact Me</h2>
+        </div>
+
+        <div className='p-2 m-1'>
+          <ul>
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='' className='flex items-center'><img src='icons/mail-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8]  p-2 rounded-lg' /><p className='pl-5'>KevinSar.97@gmail.com</p></a></li>
+
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='' className='flex items-center'><img src='icons/phone-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8]  p-2 rounded-lg' /><p className='pl-5'>(905) 962-7402</p></a></li>
+            
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='' className='flex items-center'><img src='icons/discord-icon.png' className='w-[50px] h-[50px]' /><p className='pl-5'>kevinsar</p></a></li>
+            
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.linkedin.com/in/kevin-sar-249b09131/' target='_blank' className='flex items-center'><img src='icons/linkedin-icon.png' className='w-[50px] h-[50px]' /><p className='pl-5'>https://www.linkedin.com/in/kevin-sar-249b09131/</p></a></li>
+          </ul>
+        </div>
+
+        <div className='flex-none text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
+          <h2 className='text-2xl font-semibold'>My Socials</h2>
+        </div>
+
+        <div className='p-2 m-1'>
+          <ul>
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://github.com/KevinGitSar' target='_blank' className='flex items-center'><img src='icons/github-icon.png' className='w-[50px] h-[50px] rounded-lg' /><p className='pl-5'>Github</p></a></li>
+
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://preprlabs.org/profile/KevinS' target='_blank' className='flex items-center'><img src='icons/phone-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8]  p-2 rounded-lg' /><p className='pl-5'>PreprLabs</p></a></li>
+
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.instagram.com/ksarx22/' target='_blank' className='flex items-center'><img src='icons/phone-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8]  p-2 rounded-lg' /><p className='pl-5'>Instagram</p></a></li>
+            
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.facebook.com/kevin.sar.77/' target='_blank' className='flex items-center'><img src='icons/discord-icon.png' className='w-[50px] h-[50px]' /><p className='pl-5'>Facebook</p></a></li>
+          </ul>
+        </div>
+
       </div>
 
     </main>

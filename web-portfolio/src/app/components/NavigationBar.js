@@ -11,7 +11,7 @@ export default function NavigationBar(){
         <div>
             {/* On Small Screens  */}
             <div className="">
-                <div className="fixed border border-[#379683] w-[50px] m-2 cursor-pointer z-10 transition ease-in-out delay-100 hover:scale-105" onClick={()=>{toggleMenu()}}>
+                <div className="fixed border border-[#3FAA95] w-[50px] m-2 cursor-pointer z-10 transition ease-in-out delay-100 hover:scale-105" onClick={()=>{toggleMenu()}}>
                     <img src="/icons/ks-logo.png" />
                 </div>
                 <div className={menu ? 'fixed w-full h-full bg-[#1D2233] transition ease-in-out delay-500' : 'fixed w-full h-full bg-[#1D2233] transition ease-in-out delay-100 -translate-x-full'}>
