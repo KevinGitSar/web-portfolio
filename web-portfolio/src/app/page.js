@@ -22,12 +22,12 @@ export default function Home() {
 
           <div className='flex justify-between w-1/2 mx-auto py-5'>
             <div className='p-2 rounded transition ease-in-out delay-100 hover:scale-125'>
-              <a href='https://github.com/KevinGitSar'>
+              <a href='https://github.com/KevinGitSar' target='_blank'>
                 <img src='/icons/github-icon.png' alt="Kevin's Github" title="Kevin's Github Link" className='w-[60px]'/>
               </a>
             </div>
             <div className='p-2 rounded transition ease-in-out delay-100 hover:scale-125'>
-              <a href='https://www.linkedin.com/in/kevin-sar-249b09131/'>
+              <a href='https://www.linkedin.com/in/kevin-sar-249b09131/' target='_blank'>
                 <img src='/icons/linkedin-icon.png' alt="Kevin's LinkedIn" title="Kevin's LinkedIn Link" className='w-[60px]'/>
               </a>
             </div>
@@ -316,6 +316,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Contact/Socials Section */}
       <div id='contact' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#1D2233]'>
 
         <div className='flex-none text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
@@ -324,13 +325,13 @@ export default function Home() {
 
         <div className='p-2 m-1'>
           <ul>
-            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='' className='flex items-center'><img src='icons/mail-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8]  p-2 rounded-lg' /><p className='pl-5'>KevinSar.97@gmail.com</p></a></li>
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='mailto:KevinSar.97@gmail.com' title='KevinSar.97@gmail.com' className='flex items-center'><img src='icons/mail-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8] p-2 rounded-lg' /><p className='pl-5'>KevinSar.97@gmail.com</p></a></li>
 
-            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='' className='flex items-center'><img src='icons/phone-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8]  p-2 rounded-lg' /><p className='pl-5'>(905) 962-7402</p></a></li>
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='tel:+1-905-962-7402' title='+1 (905) 962-7402' className='flex items-center'><img src='icons/phone-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8] p-2 rounded-lg' /><p className='pl-5'>(905) 962-7402</p></a></li>
             
-            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='' className='flex items-center'><img src='icons/discord-icon.png' className='w-[50px] h-[50px]' /><p className='pl-5'>kevinsar</p></a></li>
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://discordapp.com/users/225430076114731008' className='flex items-center'><img src='icons/discord-icon.png' className='w-[50px] h-[50px]' /><p className='pl-5'>kevinsar</p></a></li>
             
-            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.linkedin.com/in/kevin-sar-249b09131/' target='_blank' className='flex items-center'><img src='icons/linkedin-icon.png' className='w-[50px] h-[50px]' /><p className='pl-5'>https://www.linkedin.com/in/kevin-sar-249b09131/</p></a></li>
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.linkedin.com/in/kevin-sar-249b09131/' target='_blank' className='flex items-center'><img src='icons/linkedin-icon.png' className='w-[50px] h-[50px]' /><p className='pl-5'>LinkedIn</p></a></li>
           </ul>
         </div>
 
@@ -342,11 +343,11 @@ export default function Home() {
           <ul>
             <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://github.com/KevinGitSar' target='_blank' className='flex items-center'><img src='icons/github-icon.png' className='w-[50px] h-[50px] rounded-lg' /><p className='pl-5'>Github</p></a></li>
 
-            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://preprlabs.org/profile/KevinS' target='_blank' className='flex items-center'><img src='icons/phone-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8]  p-2 rounded-lg' /><p className='pl-5'>PreprLabs</p></a></li>
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://preprlabs.org/profile/KevinS' target='_blank' className='flex items-center'><img src='icons/preprlabs-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8] p-2 rounded-lg' /><p className='pl-5'>PreprLabs</p></a></li>
 
-            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.instagram.com/ksarx22/' target='_blank' className='flex items-center'><img src='icons/phone-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8]  p-2 rounded-lg' /><p className='pl-5'>Instagram</p></a></li>
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.instagram.com/ksarx22/' target='_blank' className='flex items-center'><img src='icons/instagram-icon.png' className='w-[50px] h-[50px] bg-[#0A0F22] rounded-lg' /><p className='pl-5'>Instagram</p></a></li>
             
-            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.facebook.com/kevin.sar.77/' target='_blank' className='flex items-center'><img src='icons/discord-icon.png' className='w-[50px] h-[50px]' /><p className='pl-5'>Facebook</p></a></li>
+            <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.facebook.com/kevin.sar.77/' target='_blank' className='flex items-center'><img src='icons/facebook-icon.png' className='w-[50px] h-[50px] bg-[#0A0F22] rounded-lg' /><p className='pl-5'>Facebook</p></a></li>
           </ul>
         </div>
 
