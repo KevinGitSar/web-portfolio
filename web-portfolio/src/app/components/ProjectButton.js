@@ -2,7 +2,7 @@ export default function ProjectButton(props){
     
     return(
         <>
-        <a href={props.link} className={`w-11/12 mx-auto transition ease-in-out delay-100 hover:scale-105 m-1 border-[3px] border-[${props.borderColor}] hover:border-[3px] hover:border-[#3FAA95] rounded-lg`}>
+        <a href={props.link} className={`w-11/12 mx-auto sm:w-10/12 md:w-7/12 lg:w-1/2 xl:w-1/3 transition ease-in-out delay-100 hover:scale-105 m-1 border-[3px] border-[${props.borderColor}] hover:border-[3px] hover:border-[#3FAA95] rounded-lg`}>
             <div className={`flex justify-between m-1 bg-[${props.bgColor}]`}>
                 <div className={`w-1/3 m-2 border-2 border-[${props.borderColor}] rounded`}>
                     <img src={props.mainImage} alt={props.mainImage} className='w-full h-[100px] object-contain' />
