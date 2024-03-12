@@ -33,10 +33,11 @@ export default function Cursor(props){
 
     return(
         <>
-            <div id="cursor__circle" className="fixed w-20 h-20 z-30 rounded-full flex justify-center items-center backdrop-blur-3xl transform duration-300 ml-10">
-                <div className="absolute rounded-full w-12 h-12 bg-white motion-safe:animate-ping"></div>
+            <div id="cursor__circle" className="fixed w-14 h-14 z-60 rounded-full flex justify-center items-center backdrop-blur-3xl transform duration-300 ml-10">
+                <div className="absolute rounded-full w-10 h-10 bg-white motion-safe:animate-ping"></div>
                 <div className="w-full flex bg-[#3FAA95] justify-center items-center backdrop-blur-3xl h-full rounded-full text-center">
-                    <p className="select-none">Mouse Buddy</p>
+                    <img src="icons/cat-4-240.png" />
+                    {/* <p className="select-none text-xs">Mouse Buddy</p> */}
                 </div>
             </div>
       </>
