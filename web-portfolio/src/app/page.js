@@ -3,8 +3,9 @@
 import Image from 'next/image';
 import NavigationBar from './components/NavigationBar';
 import ProjectButton from './components/ProjectButton';
-import ProjectSection from './components/ProjectSection';
 import Cursor from './components/Cursor';
+import Reveal from './components/Reveal';
+import PDFViewer from './components/PDFViewer';
 
 import { useState } from 'react';
 
@@ -14,14 +15,16 @@ export default function Home() {
 
   return (
     <main>
-      <Cursor></Cursor>
       <NavigationBar></NavigationBar>
-
       {/* Landing Page */}
       <div id='home' className='min-h-screen flex flex-col justify-center border-[5px] border-[#1D2233]'>
-        <div className='text-center h-1/2 flex flex-col justify-center'>
-          <h1 className='text-3xl'>Hi, my name is <span className='font-semibold text-[#3FAA95]'>Kevin Sar</span></h1>
-          <h1 className='text-xl mt-5'>and I'm a <span className='font-semibold text-[#3FAA95]'>Full Stack Developer</span>.</h1>
+        <div className='relative text-center h-1/2 flex flex-col justify-center'>
+          <div className='mx-auto'>
+              <h1 className='text-3xl'>
+            <Reveal>Hi, my name is <span className='font-semibold text-[#3FAA95]'>Kevin Sar</span></Reveal></h1>
+              <h1 className='text-xl mt-5'>
+            <Reveal>and I'm a <span className='font-semibold text-[#3FAA95]'>Full Stack Developer</span>.</Reveal></h1>
+          </div>
 
           <div className='flex justify-between w-1/2 mx-auto py-5'>
             <div className='p-2 rounded transition ease-in-out delay-100 hover:scale-125'>
@@ -41,10 +44,12 @@ export default function Home() {
       {/* About Me Page */}
       <div id='about' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#1D2233]'>
         <div className='sm:mx-auto sm:w-10/12 md:w-7/12 lg:w-1/2 xl:w-1/3 text-center p-5 mx-1 bg-[#1D2233] border-[5px] border-[#1D2233]'>
-          <h2 className='text-5xl font-semibold'>About Me</h2>
+          <h2 className='text-5xl font-semibold flex justify-center'><Reveal>About Me</Reveal></h2>
         </div>
         <div className='sm:mx-auto sm:w-10/12 md:w-7/12 lg:w-1/2 xl:w-1/3 px-5 py-5 mx-1 bg-[#1D2233] border-[5px] border-[#1D2233]'>
-          <p className='font-semibold text-3xl text-center'>I am a Software Engineering graduate from Mohawk College. I enjoy working on full-stack web-based projects. I have a high interest in mobile and game development, but I am always open to learn and explore new things.</p>
+        <Reveal><p className='font-semibold text-3xl text-center'>I am a Software Engineering graduate from Mohawk College.</p></Reveal>
+        <Reveal><p className='font-semibold text-3xl text-center'>I enjoy working on full-stack web-based projects. I have a high interest in mobile and game development,</p></Reveal>
+        <Reveal><p className='font-semibold text-3xl text-center'>but I am always open to learn and explore new things.</p></Reveal>
         </div>
       </div>
 
@@ -52,7 +57,7 @@ export default function Home() {
       <div id='projects' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#1D2233]'>
 
         <div className='w-11/12 mx-auto sm:w-10/12 md:w-7/12 lg:w-1/2 xl:w-1/3 text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
-          <h2 className='text-5xl font-semibold'>My Projects</h2>
+          <h2 className='text-5xl font-semibold flex justify-center'><Reveal>My Projects</Reveal></h2>
         </div>
         
         <ProjectButton title={'PreprLabs Web Dev Challenges'} link={'#project-pl'} mainImage={'/images/pl-images/challenge-1-clone-page.png'} image1={'/icons/react-logo.png'} image2={'/icons/mongodb-logo.png'} image3={'/icons/redux-logo.png'} image4={'/icons/tailwind-logo.png'} borderColor={'#1D2233'} bgColor={'#0A0F22'} hover={'#3FAA95'}></ProjectButton>
@@ -68,127 +73,144 @@ export default function Home() {
       {/* PreprLabs Project Section */}
       <div id='project-pl' className='min-h-screen flex flex-col justify-evenly border-[5px] border-[#1D2233]'>
         <div className='text-center p-5 m-1'>
-            <h2 className='text-5xl font-semibold'>PreprLabs Web Dev Challenges</h2>
+            <h2 className='text-5xl font-semibold flex justify-center'><Reveal>PreprLabs Web Dev Challenges</Reveal></h2>
         </div>
         <div className='text-center m-1 sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
-            <img src="images/pl-images/challenge-1-clone-page.png" />
+            <Reveal><img src="images/pl-images/challenge-1-clone-page.png" /></Reveal>
         </div>
         <div className='flex flex-col justify-between sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
 
-            <div className='m-1 text-xs'>
-                <p className="float-right">December 2023</p>
+            <div className='m-1 text-xs flex justify-end'>
+              <Reveal><p className="float-right">December 2023</p></Reveal>
             </div>
 
             <div className='m-1'>
-                <p>Project PreprLabs Web Dev Challenges is a 4 part challenge for the PreprLabs Flexible Upskilling Network (F.U.N.) Program.</p>
+              <Reveal><p>Project PreprLabs Web Dev Challenges is a 4 part challenge for the PreprLabs Flexible Upskilling Network (F.U.N.) Program.</p></Reveal>
             </div>
 
             <div className='m-1'>
-                <p>Part 1: Clone the design of PreprLab's Explore Page.</p>
+              <Reveal><p>Part 1: Clone the design of PreprLab's Explore Page.</p></Reveal>
+              <Reveal>
                 <ul className='list-disc pl-5'>
                   <li>JavaScript, HTML/CSS was used to clone the design of PreprLab's Explore page.</li>
                   <li>Frameworks and Tools used are React and TailwindCSS.</li>
                 </ul>
+              </Reveal>
             </div>
             
             <div className='m-1'>
-                <p>Part 2: Implement account creation and login system.</p>
+              <Reveal><p>Part 2: Implement account creation and login system.</p></Reveal>
+              <Reveal>
                 <ul className='list-disc pl-5'>
                   <li>JSON Web Token was used in the process of account creation and login authorization.</li>
                   <li>Node Express was used to create the back-end server.</li>
                   <li>MongoDB was used to store account data.</li>
                 </ul>
+                </Reveal>
             </div>
             
             <div className='m-1'>
-                <p>Part 3: Clone dashboard page.</p>
+              <Reveal><p>Part 3: Clone dashboard page.</p></Reveal>
+              <Reveal>
                 <ul className='list-disc pl-5'>
                   <li>Create 'add a project' page.</li>
                   <li>'Add a project' simulated using Redux and Redux-Persist.</li>
                 </ul>
+              </Reveal>
             </div>
             <div className='m-1'>
-                <p>Part 4: Incorporate the Accessibility Button.</p>
+              <Reveal><p>Part 4: Incorporate the Accessibility Button.</p></Reveal>
+              <Reveal>
                 <ul className='list-disc pl-5'>
                   <li>Accessibility Button created as a react component.</li>
                   <li>Used react-hooks to implement accessibility features.</li>
                 </ul>
+              </Reveal>
             </div>
         </div>
       </div>
 
       {/* Rate My Cut Project Section */}
       <div id='project-rmc' className='min-h-screen flex flex-col justify-evenly border-[5px] border-[#1D2233]'>
-        <div className='text-center p-5 m-1'>
-            <h2 className='text-5xl font-semibold'>Rate My Cut</h2>
+        <div className='text-center p-5 m-1 flex justify-center'>
+            <h2 className='text-5xl font-semibold'><Reveal>Rate My Cut</Reveal></h2>
         </div>
         <div className='text-center m-1 sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
-            <img src="images/rmc-images/rmc-main.png" />
+            <Reveal><img src="images/rmc-images/rmc-main.png" /></Reveal>
         </div>
         <div className='flex flex-col justify-between sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
 
-            <div className='m-1 text-xs'>
-                <p className="float-right">October 2023</p>
+            <div className='m-1 text-xs flex justify-end'>
+              <Reveal><p className="float-right">October 2023</p></Reveal>
             </div>
 
             <div className='m-1'>
-                <p>Rate My Cut is a haircut catalogue that allows users to post their haircut to share and help others find what kind of hairstyles they want.</p>
+              <Reveal><p>Rate My Cut is a haircut catalogue that allows users to post their haircut to share and help others find what kind of hairstyles they want.</p></Reveal>
             </div>
 
             <div className='m-1'>
-                <p>Frontend:</p>
+              <Reveal><p>Frontend:</p></Reveal>
+              <Reveal>
                 <ul className='list-disc pl-5'>
                   <li>Figma was used to create the designs of web pages.</li>
                   <li>Header, Navbar, and Footers created as Vue Components.</li>
                   <li>JavaScript, HTML/CSS, and TailwindCSS used to design web pages.</li>
                 </ul>
+              </Reveal>
             </div>
             
             <div className='m-1'>
-                <p>Backend:</p>
+              <Reveal><p>Backend:</p></Reveal>
+              <Reveal>
                 <ul className='list-disc pl-5'>
                   <li>Laravel used to create models, controllers, and schemas for database migration and api calls.</li>
                   <li>User authentication and authorization.</li>
                 </ul>
+              </Reveal>
             </div>
             
             <div className='m-1'>
-                <p>Database:</p>
+              <Reveal><p>Database:</p></Reveal>
+              <Reveal>
                 <ul className='list-disc pl-5'>
                   <li>MySQL used to store structured data.</li>
                 </ul>
+              </Reveal>
             </div>
             <div className='m-1'>
-                <p>Deployment:</p>
+              <Reveal><p>Deployment:</p></Reveal>
+              <Reveal>
                 <ul className='list-disc pl-5'>
                   <li>Application Server set-up with Linux OS.</li>
                   <li>HTTPS/SSL/DNS Configuration.</li>
                   <li>Hosted and Deployed with Digital Ocean.</li>
                   <li>Check it out on <a href='https://kevinsar.ca/' target='_blank' className='transition ease-in-out delay-100 hover:text-[#3FAA95]'>kevinsar.ca</a>.</li>
                 </ul>
+              </Reveal>
             </div>
         </div>
       </div>
 
       {/* MeApp Project Section */}
       <div id='project-ma' className='min-h-screen flex flex-col justify-evenly border-[5px] border-[#1D2233]'>
-        <div className='text-center p-5 m-1'>
-            <h2 className='text-5xl font-semibold'>MeApp</h2>
+        <div className='text-center p-5 m-1 flex justify-center'>
+          <Reveal><h2 className='text-5xl font-semibold'>MeApp</h2></Reveal>
         </div>
-        <div className='text-center m-1 sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
-            <img src="images/ma-images/meapp-home-page.png" className='object-contain max-h-[300px] mx-auto'/>
+        <div className='text-center m-1 sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 flex justify-center'>
+          <Reveal><img src="images/ma-images/meapp-home-page.png" className='object-contain max-h-[300px] mx-auto'/></Reveal>
         </div>
         <div className='flex flex-col justify-between sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
 
-            <div className='m-1 text-xs'>
-                <p className="float-right">April 2022</p>
+            <div className='m-1 text-xs flex justify-end'>
+              <Reveal><p className="float-right">April 2022</p></Reveal>
             </div>
 
             <div className='m-1'>
-                <p>The software engineer project is where I and 3 other students work together and establish full collaboration and proper communication with a real client. MeApp is a dating application with the benefit teaching users mental wellness, self-discovery, and emphasis on a safety approach to online dating.</p>
+              <Reveal><p>The software engineering project is where I and 3 other students work together and establish full collaboration and proper communication with a real client. MeApp is a dating application with the benefit of teaching users mental wellness, self-discovery, and emphasis on a safety approach to online dating.</p></Reveal>
             </div>
 
             <div className='m-1'>
+              <Reveal>
                 <ul className='list-disc pl-5'>
                   <li>Assumed the role of team lead to delegate tasks and ensure their timely completion.</li>
                   <li>Maintained regular and effective communication with the client.</li>
@@ -197,29 +219,31 @@ export default function Home() {
                   <li>Produced a prototype of the application with all requested features.</li>
                   <li>Java, Android SDK, SQLite, and Stream API was used to produce the prototype.</li>
                 </ul>
+              </Reveal>
             </div>
         </div>
       </div>
 
       {/* Prime Time Gaming Project Section */}
       <div id='project-ptg' className='min-h-screen flex flex-col justify-evenly border-[5px] border-[#1D2233]'>
-        <div className='text-center p-5 m-1'>
-            <h2 className='text-5xl font-semibold'>Prime Time Gaming</h2>
+        <div className='text-center p-5 m-1 flex justify-center'>
+          <Reveal><h2 className='text-5xl font-semibold'>Prime Time Gaming</h2></Reveal>
         </div>
         <div className='text-center m-1 sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
-            <img src="images/ptg-images/prime-time-gaming-main-page.png"/>
+          <Reveal><img src="images/ptg-images/prime-time-gaming-main-page.png"/></Reveal>
         </div>
         <div className='flex flex-col justify-between sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
 
-            <div className='m-1 text-xs'>
-                <p className="float-right">May 2021</p>
+            <div className='m-1 text-xs flex justify-end'>
+            <Reveal><p className="float-right">May 2021</p></Reveal>
             </div>
 
             <div className='m-1'>
-                <p>Prime Time Gaming is a prime numbers game created using React, JavaScript, and Bootstrap. It is also my first ever completed personal project.</p>
+            <Reveal><p>Prime Time Gaming is a prime numbers game created using React, JavaScript, and Bootstrap. It is also my first ever completed personal project.</p></Reveal>
             </div>
 
             <div className='m-1'>
+              <Reveal>
                 <ul className='list-disc pl-5'>
                   <li>It's a web application with a Model-View implementation.</li>
                   <li>State Management was used to keep track of the game state.</li>
@@ -228,6 +252,7 @@ export default function Home() {
                   <li>Netlify was used to deploy the project.</li>
                   <li>Check it out on <a href='https://prime-time-gaming.netlify.app/' className='transition ease-in-out delay-100 hover:text-[#3FAA95]'>prime-time-gaming.netlify.app</a>.</li>
                 </ul>
+              </Reveal>
             </div>
         </div>
       </div>
@@ -235,64 +260,63 @@ export default function Home() {
       {/* Skills Section */}
       <div id='skills' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#1D2233]'>
 
-        <div className='text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233] sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
-          <h2 className='text-2xl font-semibold'>My Skills</h2>
+        <div className='text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233] sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 flex justify-center'>
+          <h2 className='text-2xl font-semibold'><Reveal>My Skills</Reveal></h2>
         </div>
         
         <div className='mx-1 sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
 
           <div className='flex'>
             <div className='w-1/2 text-center p-5 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
-              <h3 className='text-xl font-semibold'>Frontend</h3>
+              <h3 className='text-xl font-semibold'><span className='flex justify-center'><Reveal>Frontend</Reveal></span></h3>
               <ul className='text-start mt-4'>
-                <li>JavaScript</li>
-                <li>HTML & CSS</li>
-                <li>React</li>
-                <li>Vue</li>
-                <li>TailwindCSS</li>
-                <li>Bootstrap</li>
+                <Reveal><li>JavaScript</li></Reveal>
+                <Reveal><li>HTML & CSS</li></Reveal>
+                <Reveal><li>React</li></Reveal>
+                <Reveal><li>Vue</li></Reveal>
+                <Reveal><li>TailwindCSS</li></Reveal>
+                <Reveal><li>Bootstrap</li></Reveal>
               </ul>
             </div>
 
             <div className='w-1/2 text-center p-5 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
-              <h3 className='text-xl font-semibold'>Backend</h3>
+              <h3 className='text-xl font-semibold'><span className='flex justify-center'><Reveal>Backend</Reveal></span></h3>
               <ul className='text-start mt-4'>
-                <li>PHP</li>
-                <li>Laravel</li>
-                <li>MySQL</li>
-                <li>MongoDB</li>
-                <li>Redis</li>
-                <li>NodeJS</li>
-                <li>ExpressJS</li>
+                <Reveal><li>PHP</li></Reveal>
+                <Reveal><li>Laravel</li></Reveal>
+                <Reveal><li>MySQL</li></Reveal>
+                <Reveal><li>MongoDB</li></Reveal>
+                <Reveal><li>Redis</li></Reveal>
+                <Reveal><li>NodeJS</li></Reveal>
+                <Reveal><li>ExpressJS</li></Reveal>
               </ul>
             </div>
           </div>
 
           <div className='flex justify-evenly'>
             <div className='w-1/2 text-center p-5 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
-              <h3 className='text-xl font-semibold'>Tools</h3>
+              <h3 className='text-xl font-semibold'><span className='flex justify-center'><Reveal>Tools</Reveal></span></h3>
               <ul className='text-start mt-4'>
-                <li>Github</li>
-                <li>Git</li>
-                <li>VS Code</li>
-                <li>Android Studio</li>
-                <li>IntelliJ</li>
+                <Reveal><li>Github</li></Reveal>
+                <Reveal><li>Git</li></Reveal>
+                <Reveal><li>VS Code</li></Reveal>
+                <Reveal><li>Android Studio</li></Reveal>
+                <Reveal><li>IntelliJ</li></Reveal>
               </ul>
             </div>
 
             <div className='w-1/2 text-center p-5 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
-              <h3 className='text-xl font-semibold'>Exploring</h3>
+              <h3 className='text-xl font-semibold'><span className='flex justify-center'><Reveal>Exploring</Reveal></span></h3>
               <ul className='text-start mt-4'>
-                <li>Flutter</li>
-                <li>Java</li>
-                <li>C#</li>
-                <li>ASP.NET</li>
-                <li>Python</li>
-                <li>Unity</li>
+                <Reveal><li>Flutter</li></Reveal>
+                <Reveal><li>Java</li></Reveal>
+                <Reveal><li>C#</li></Reveal>
+                <Reveal><li>ASP.NET</li></Reveal>
+                <Reveal><li>Python</li></Reveal>
+                <Reveal><li>Unity</li></Reveal>
               </ul>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -315,7 +339,7 @@ export default function Home() {
         </div>
 
         <div className={!togglePDF ? 'grow overflow-hidden transition-all ease-in-out delay-100 opacity-100 visible' : 'transition-all ease-in-out delay-100 opacity-0 invisible'}>
-          <iframe src='/downloads/Kevin_Sar_-_Resume_2024.pdf' className='w-full h-[75vh] overflow-hidden ' ></iframe>
+          <PDFViewer></PDFViewer>
         </div>
       </div>
 
@@ -325,36 +349,46 @@ export default function Home() {
         <div className='md:grid md:grid-cols-8'>
           <div className='md:col-span-4 lg:col-start-2 lg:col-span-3 xl:col-start-2 xl:col-span-3  md:w-full'>
             <div className='flex-none text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233] sm:mx-auto sm:w-6/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
-              <h2 className='text-2xl font-semibold'>Contact Me</h2>
+              <h2 className='text-2xl font-semibold flex justify-center'><Reveal>Contact Me</Reveal></h2>
             </div>
 
             <div className='p-2 m-1 sm:mx-auto  sm:mx-auto sm:w-6/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
               <ul>
+                <Reveal>
                 <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='mailto:KevinSar.97@gmail.com' title='KevinSar.97@gmail.com' className='flex items-center'><img src='icons/mail-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8] p-2 rounded-lg' /><p className='pl-5'>KevinSar.97@gmail.com</p></a></li>
-
+                </Reveal>
+                <Reveal>
                 <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='tel:+1-905-962-7402' title='+1 (905) 962-7402' className='flex items-center'><img src='icons/phone-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8] p-2 rounded-lg' /><p className='pl-5'>(905) 962-7402</p></a></li>
-                
-                <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://discordapp.com/users/225430076114731008' className='flex items-center'><img src='icons/discord-icon.png' className='w-[50px] h-[50px]' /><p className='pl-5'>kevinsar</p></a></li>
-                
+                </Reveal>
+                <Reveal>
+                <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://discordapp.com/users/225430076114731008' target="_blank" className='flex items-center'><img src='icons/discord-icon.png' className='w-[50px] h-[50px]' /><p className='pl-5'>kevinsar</p></a></li>
+                </Reveal>
+                <Reveal>
                 <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.linkedin.com/in/kevin-sar-249b09131/' target='_blank' className='flex items-center'><img src='icons/linkedin-icon.png' className='w-[50px] h-[50px]' /><p className='pl-5'>LinkedIn</p></a></li>
+                </Reveal>
               </ul>
             </div>
           </div>
 
           <div className='md:col-span-4 lg:col-start-5 lg:col-span-3 xl:col-start-5 xl:col-span-3  md:w-full'>
             <div className='flex-none text-center p-5 mx-1 bg-[#0A0F22] border-[5px] border-[#1D2233] sm:mx-auto  sm:mx-auto sm:w-6/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
-              <h2 className='text-2xl font-semibold'>My Socials</h2>
+              <h2 className='text-2xl font-semibold flex justify-center'><Reveal>My Socials</Reveal></h2>
             </div>
 
             <div className='p-2 m-1 sm:mx-auto  sm:mx-auto sm:w-6/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
               <ul>
+                <Reveal>
                 <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://github.com/KevinGitSar' target='_blank' className='flex items-center'><img src='icons/github-icon.png' className='w-[50px] h-[50px] rounded-lg' /><p className='pl-5'>Github</p></a></li>
-
+                </Reveal>
+                <Reveal>
                 <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://preprlabs.org/profile/KevinS' target='_blank' className='flex items-center'><img src='icons/preprlabs-icon.png' className='w-[50px] h-[50px] bg-[#f0f4f8] p-2 rounded-lg' /><p className='pl-5'>PreprLabs</p></a></li>
-
+                </Reveal>
+                <Reveal>
                 <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.instagram.com/ksarx22/' target='_blank' className='flex items-center'><img src='icons/instagram-icon.png' className='w-[50px] h-[50px] bg-[#0A0F22] rounded-lg' /><p className='pl-5'>Instagram</p></a></li>
-                
+                </Reveal>
+                <Reveal>
                 <li className='my-4 transition ease-in-out delay-100 hover:text-[#3faa95] hover:bg-[#0A0F22]'><a href='https://www.facebook.com/kevin.sar.77/' target='_blank' className='flex items-center'><img src='icons/facebook-icon.png' className='w-[50px] h-[50px] bg-[#0A0F22] rounded-lg' /><p className='pl-5'>Facebook</p></a></li>
+                </Reveal>
               </ul>
             </div>
           </div>
@@ -362,6 +396,7 @@ export default function Home() {
 
       </div>
 
+      <Cursor></Cursor>
     </main>
   )
 }
