@@ -43,13 +43,15 @@ export default function Home() {
 
       {/* About Me Page */}
       <div id='about' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#1D2233]'>
-        <div className='sm:mx-auto sm:w-10/12 md:w-7/12 lg:w-1/2 xl:w-1/3 text-center p-5 mx-1 bg-[#1D2233] border-[5px] border-[#1D2233]'>
+        <div className='sm:mx-auto sm:w-10/12 md:w-7/12 lg:w-1/2 text-center p-5 mx-1 bg-[#1D2233] border-[5px] border-[#1D2233]'>
           <h2 className='text-5xl font-semibold flex justify-center'>About Me</h2>
         </div>
-        <div className='sm:mx-auto sm:w-10/12 md:w-7/12 lg:w-1/2 xl:w-1/3 px-5 py-5 mx-1 bg-[#1D2233] border-[5px] border-[#1D2233]'>
-        <Reveal><p className='text-3xl text-center'>I am a <span className='font-semibold text-[#3FAA95]'>Software Engineering</span> graduate from Mohawk College.</p></Reveal>
-        <Reveal><p className='text-3xl text-center'>I enjoy working on full-stack <span className='font-semibold text-[#3FAA95]'>web-based</span> projects. I have a high interest in <span className='font-semibold text-[#3FAA95]'>mobile</span> and <span className='font-semibold text-[#3FAA95]'>game development</span>,</p></Reveal>
-        <Reveal><p className='text-3xl text-center'>but I am always open to learn and explore new things.</p></Reveal>
+        <div className='sm:mx-auto sm:w-10/12 md:w-7/12 lg:w-1/2 px-5 py-5 mx-1 bg-[#1D2233] border-[5px] border-[#1D2233]'>
+        <Reveal>
+          <p className='text-2xl text-center'>
+          I am a <span className='font-semibold text-[#3FAA95]'>Software Engineering</span> graduate from Mohawk College.I enjoy working on full-stack <span className='font-semibold text-[#3FAA95]'>web-based</span> projects. I have a high interest in <span className='font-semibold text-[#3FAA95]'>mobile</span> and <span className='font-semibold text-[#3FAA95]'>game development</span>, but I am always open to learn and explore new things.
+          </p>
+        </Reveal>
         </div>
       </div>
 
@@ -80,8 +82,9 @@ export default function Home() {
         </div>
         <div className='flex flex-col justify-between sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
 
-            <div className='m-1 text-xs flex justify-end'>
-              <Reveal><p className="float-right">December 2023</p></Reveal>
+            <div className='m-1 text-xs flex justify-between'>
+              <span className='transform transition hover:scale-105 '><Reveal><p className='text-[#3FAA95]'><a href='https://github.com/KevinGitSar/FrontendDev-Challenge-1' target='_blank'>https://github.com/KevinGitSar/FrontendDev-Challenge-1</a></p></Reveal></span>
+              <Reveal><p>December 2023</p></Reveal>
             </div>
 
             <div className='m-1'>
@@ -140,7 +143,8 @@ export default function Home() {
         </div>
         <div className='flex flex-col justify-between sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
 
-            <div className='m-1 text-xs flex justify-end'>
+            <div className='m-1 text-xs flex justify-between'>
+              <span className='transform transition hover:scale-105 '><Reveal><p className='text-[#3FAA95]'><a href='https://github.com/KevinGitSar/Rate-My-Cut' target='_blank'>https://github.com/KevinGitSar/Rate-My-Cut</a></p></Reveal></span>
               <Reveal><p className="float-right">October 2023</p></Reveal>
             </div>
 
@@ -201,7 +205,8 @@ export default function Home() {
         </div>
         <div className='flex flex-col justify-between sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
 
-            <div className='m-1 text-xs flex justify-end'>
+            <div className='m-1 text-xs flex justify-between'>
+              <span className='transform transition hover:scale-105 '><Reveal><p className='text-[#3FAA95]'><a href='https://github.com/ZackFreeman12/MeApp' target='_blank'>https://github.com/ZackFreeman12/MeApp</a></p></Reveal></span>
               <Reveal><p className="float-right">April 2022</p></Reveal>
             </div>
 
@@ -234,7 +239,8 @@ export default function Home() {
         </div>
         <div className='flex flex-col justify-between sm:mx-auto sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12'>
 
-            <div className='m-1 text-xs flex justify-end'>
+            <div className='m-1 text-xs flex justify-between'>
+              <span className='transform transition hover:scale-105 '><Reveal><p className='text-[#3FAA95]'><a href='https://github.com/KevinGitSar/primegame' target='_blank'>https://github.com/KevinGitSar/primegame</a></p></Reveal></span>
             <Reveal><p className="float-right">May 2021</p></Reveal>
             </div>
 
@@ -323,22 +329,23 @@ export default function Home() {
       {/* Resume Section */}
       <div id='resume' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#0A0F22]'>
 
-        <div className='flex-none text-center p-5 mx-1 bg-[#0A0F22]'>
+        <div className='text-center p-5 mx-1 bg-[#0A0F22]'>
           <h2 className='text-5xl font-semibold'>My Resume</h2>
         </div>
 
+        <div className='flex flex-col sm:flex-row justify-center my-4'>
+          <div className='text-center my-2 sm:my-0'>
+            <a href='/downloads/Kevin_Sar_-_Resume_2024.pdf' download>
+            <button className='px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]'>Resume PDF Download</button>
+            </a>
+          </div>
 
-        <div className='flex-none text-center mt-4'>
-          <a href='/downloads/Kevin_Sar_-_Resume_2024.pdf' download>
-          <button className='px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]'>Resume PDF Download</button>
-          </a>
+          <div className='text-center mx-1'>
+            <button className='px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' onClick={()=>{setTogglePDF(!togglePDF)}}>{!togglePDF ? 'Hide Resume' : 'View Resume'}</button>
+          </div>
         </div>
 
-        <div className='flex-none text-center my-4'>
-          <button className='px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' onClick={()=>{setTogglePDF(!togglePDF)}}>{togglePDF ? 'Hide Resume' : 'View Resume'}</button>
-        </div>
-
-        <div className={togglePDF ? 'grow overflow-hidden transition-all ease-in-out delay-100 opacity-100 visible' : 'transition-all ease-in-out delay-100 opacity-0 invisible'}>
+        <div className={!togglePDF ? 'grow overflow-hidden transition-all ease-in-out delay-100 opacity-100 visible' : 'transition-all ease-in-out delay-100 opacity-0 invisible'}>
           <PDFViewer></PDFViewer>
         </div>
       </div>
