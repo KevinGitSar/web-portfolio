@@ -49,7 +49,7 @@ export default function Home() {
         <div className='sm:mx-auto sm:w-10/12 md:w-7/12 lg:w-1/2 px-5 py-5 mx-1 bg-[#1D2233] border-[5px] border-[#1D2233]'>
         <Reveal>
           <p className='text-2xl text-center'>
-          I am a <span className='font-semibold text-[#3FAA95]'>Software Engineering</span> graduate from Mohawk College.I enjoy working on full-stack <span className='font-semibold text-[#3FAA95]'>web-based</span> projects. I have a high interest in <span className='font-semibold text-[#3FAA95]'>mobile</span> and <span className='font-semibold text-[#3FAA95]'>game development</span>, but I am always open to learn and explore new things.
+          I am a <span className='font-semibold text-[#3FAA95]'>Software Engineering</span> graduate from Mohawk College. I enjoy working on full-stack <span className='font-semibold text-[#3FAA95]'>web-based</span> projects. I have a high interest in <span className='font-semibold text-[#3FAA95]'>mobile</span> and <span className='font-semibold text-[#3FAA95]'>game development</span>, but I am always open to learn and explore new things.
           </p>
         </Reveal>
         </div>
@@ -282,14 +282,15 @@ export default function Home() {
                 <Reveal><li>Vue</li></Reveal>
                 <Reveal><li>TailwindCSS</li></Reveal>
                 <Reveal><li>Bootstrap</li></Reveal>
+                <Reveal><li>AlpineJS</li></Reveal>
               </ul>
             </div>
 
             <div className='w-1/2 text-center p-5 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
               <h3 className='text-xl font-semibold'><span className='flex justify-center'><Reveal>Backend</Reveal></span></h3>
               <ul className='text-start mt-4'>
-                <Reveal><li>PHP</li></Reveal>
-                <Reveal><li>Laravel</li></Reveal>
+                <Reveal><li>Django/Python</li></Reveal>
+                <Reveal><li>Laravel/PHP</li></Reveal>
                 <Reveal><li>MySQL</li></Reveal>
                 <Reveal><li>MongoDB</li></Reveal>
                 <Reveal><li>Redis</li></Reveal>
@@ -303,6 +304,7 @@ export default function Home() {
             <div className='w-1/2 text-center p-5 bg-[#0A0F22] border-[5px] border-[#1D2233]'>
               <h3 className='text-xl font-semibold'><span className='flex justify-center'><Reveal>Tools</Reveal></span></h3>
               <ul className='text-start mt-4'>
+                <Reveal><li>Docker</li></Reveal>
                 <Reveal><li>Github</li></Reveal>
                 <Reveal><li>Git</li></Reveal>
                 <Reveal><li>VS Code</li></Reveal>
@@ -318,7 +320,7 @@ export default function Home() {
                 <Reveal><li>Java</li></Reveal>
                 <Reveal><li>C#</li></Reveal>
                 <Reveal><li>ASP.NET</li></Reveal>
-                <Reveal><li>Python</li></Reveal>
+                <Reveal><li>Unreal Engine</li></Reveal>
                 <Reveal><li>Unity</li></Reveal>
               </ul>
             </div>
