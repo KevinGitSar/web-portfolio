@@ -11,7 +11,8 @@ import { useState } from 'react';
 
 export default function Home() {
 
-  const [togglePDF, setTogglePDF] = useState(false);
+  // const [togglePDF, setTogglePDF] = useState(false);
+  const [experience, setExperience] = useState('tech');
 
   return (
     <main>
@@ -49,7 +50,7 @@ export default function Home() {
         <div className='sm:mx-auto sm:w-10/12 md:w-7/12 lg:w-1/2 px-5 py-5 mx-1 bg-[#1D2233] border-[5px] border-[#1D2233]'>
         <Reveal>
           <p className='text-2xl text-center'>
-          I am a <span className='font-semibold text-[#3FAA95]'>Software Engineering</span> graduate from Mohawk College. I enjoy working on full-stack <span className='font-semibold text-[#3FAA95]'>web-based</span> projects. I have a high interest in <span className='font-semibold text-[#3FAA95]'>mobile</span> and <span className='font-semibold text-[#3FAA95]'>game development</span>, but I am always open to learn and explore new things.
+          I am a <span className='font-semibold text-[#3FAA95]'>Software Engineering</span> graduate from Mohawk College currently looking for work. I enjoy working on full-stack <span className='font-semibold text-[#3FAA95]'>web-based</span> projects. I have a high interest in <span className='font-semibold text-[#3FAA95]'>mobile</span> and <span className='font-semibold text-[#3FAA95]'>game development</span>, but I am always open to learn and explore new things.
           </p>
         </Reveal>
         </div>
@@ -328,11 +329,11 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Resume Section */}
-      <div id='resume' className='min-h-screen flex flex-col justify-center border-[5px] border-[#0A0F22] bg-[#0A0F22]'>
+      {/* Experience Section */}
+      <div id='experience' className='min-h-screen flex flex-col border-[5px] border-[#0A0F22] bg-[#0A0F22]'>
 
         <div className='text-center p-5 mx-1 bg-[#0A0F22]'>
-          <h2 className='text-5xl font-semibold'>My Resume</h2>
+          <h2 className='text-5xl font-semibold'>My Experience</h2>
         </div>
 
         <div className='flex flex-col sm:flex-row justify-center my-4'>
@@ -341,14 +342,123 @@ export default function Home() {
             <button className='px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]'>Resume PDF Download</button>
             </a>
           </div>
-
-          <div className='text-center mx-1'>
-            <button className='px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' onClick={()=>{setTogglePDF(!togglePDF)}}>{!togglePDF ? 'Hide Resume' : 'View Resume'}</button>
-          </div>
         </div>
 
-        <div className={!togglePDF ? 'grow overflow-hidden transition-all ease-in-out delay-100 opacity-100 visible' : 'transition-all ease-in-out delay-100 opacity-0 invisible'}>
-          <PDFViewer></PDFViewer>
+        <div className='flex'>
+          <button className={experience == 'all' ? 'px-5 py-2 w-[220px] text-[#3faa95] rounded-lg bg-[#0A0F22] border-2 border-[#3faa95]' : 'px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' } onClick={()=>{setExperience('all')}}>All</button>
+          
+          <button className={experience == 'tech' ? 'px-5 py-2 w-[220px] text-[#3faa95] rounded-lg bg-[#0A0F22] border-2 border-[#3faa95]' : 'px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' } onClick={()=>{setExperience('tech')}}>Tech - related</button>
+          
+          <button className={experience == 'general' ? 'px-5 py-2 w-[220px] text-[#3faa95] rounded-lg bg-[#0A0F22] border-2 border-[#3faa95]' : 'px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' } onClick={()=>{setExperience('general')}}>General</button>
+        </div>
+
+        <h1 className='text-3xl ml-5  my-4'>Employment</h1>
+
+        <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
+          {/* LPG Inventory Solutions */}
+          <p className='sm:hidden text-sm my-1'>April 2024 - Present</p>
+          <div className='flex justify-between'>
+            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>General Labourer</h2>
+            <p className='hidden sm:block my-auto text-sm'>April 2024 - Present</p>
+          </div>
+          <h3 className='text-lg my-1'>LPG Inventory Solutions - Hamilton, ON, CA</h3>
+          <ul className='list-inside list-disc my-1'>
+            <li className='my-1'>Collecting and organizing 20+ transaction orders daily.</li>
+            <li className='my-1'>Packing and packaging medical orders.</li>
+            <li className='my-1'>Locating missing medical products.</li>
+            <li className='my-1'>Organizing, categorizing, and shelving medical products.</li>
+          </ul>
+        </div>
+
+        <div className={experience == 'all' || experience == 'tech' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
+          {/* Marlin Industrial Products Inc. */}
+          <p className='sm:hidden text-sm my-1'>January 2024 - April 2024</p>
+          <div className='flex justify-between'>
+            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Full Stack Developer - Intern</h2>
+            <p className='hidden sm:block my-auto text-sm'>January 2024 - April 2024</p>
+          </div>
+          <h3 className='text-lg my-1'>Marlin Industrial Products Inc. - North York, ON, CA</h3>
+          <ul className='list-inside list-disc my-1'>
+            <li className='my-1'>Participated in team activities including system design planning and code reviews.</li>
+            <li className='my-1'>Writing, maintaining, and updating application code in Django.</li>
+            <li className='my-1'>Provided support and input for improving work processes for the team.</li>
+            <li className='my-1'>Conducted development unit testing using Django's built-in automated tests.</li>
+            <li className='my-1'>Developed new project features and enhanced existing functionalities.</li>
+            <li className='my-1'>Escalates issues to Senior Developer and/or Managers when required.</li>
+          </ul>
+        </div>
+
+        <div className={experience == 'all' || experience == 'tech' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
+          {/* Evenica */}
+          <p className='sm:hidden text-sm my-1'>September 2021 - January 2022</p>
+          <div className='flex justify-between'>
+            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Junior Developer - Co-op Position</h2>
+            <p className='hidden sm:block my-auto text-sm'>September 2021 - January 2022</p>
+          </div>
+          <h3 className='text-lg my-1'>Evenica - Burlington, ON, CA</h3>
+          <ul className='list-inside list-disc my-1'>
+            <li className='my-1'>Collaborated with a team to develop e-commerce websites.</li>
+            <li className='my-1'>Tracked and organized product development with Confluence, Jira, and GIT.</li>
+            <li className='my-1'>Participated in team reviews and training by receiving and providing valuable feedback.</li>
+            <li className='my-1'>Familiar with agile methodologies as an active scrum team member.</li>
+          </ul>
+        </div>
+
+        <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
+
+          {/* Tiercon */}
+          <p className='sm:hidden text-sm my-1'>May 2017 - January 2019</p>
+          <div className='flex justify-between'>
+            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Assembler</h2>
+            <p className='hidden sm:block my-auto text-sm'>May 2017 - January 2019</p>
+          </div>
+          <h3 className='text-lg my-1'>Tiercon Corp. - Stoney Creek, ON, CA</h3>
+          <ul className='list-inside list-disc my-1'>
+            <li className='my-1'>Contributed to the assembly line by loading/unloading manufacturer parts.</li>
+            <li className='my-1'>Proficient with organizing racks, boxes, products, and car parts.</li>
+            <li className='my-1'>Conducted thorough inspections of manufacturer products to ensure it is up to specifications.</li>
+            <li className='my-1'>Supported managers by assisting with planning and coordinating work orders and tasks.</li>
+          </ul>
+        </div>
+
+        <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
+
+          {/* Fox 40 */}
+          <p className='sm:hidden text-sm my-1'>February 2016 - August 2016</p>
+          <div className='flex justify-between'>
+            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>General Labourer</h2>
+            <p className='hidden sm:block my-auto text-sm'>February 2016 - August 2016</p>
+          </div>
+          <h3 className='text-lg my-1'>Fox 40 International Inc. - Hamilton, ON, CA</h3>
+          <ul className='list-inside list-disc my-1'>
+            <li className='my-1'>Produced, arranged, and managed multiple work orders.</li>
+            <li className='my-1'>Contributed to loading and unloading parcels, packages, inventory, and products.</li>
+            <li className='my-1'>Proficient with boxing, taping, and packaging goods, products, and international orders.</li>
+            <li className='my-1'>Collaborated effectively to prepare and package large orders under tight deadlines.</li>
+          </ul>
+        </div>
+
+        
+        <h1 className='text-3xl ml-5  my-4'>Education</h1>
+
+        <div className={experience == 'all' || experience == 'tech' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden'}>
+          {/* Mohawk College */}
+          <p className='sm:hidden text-sm my-1'>September 2019 - April 2023</p>
+          <div className='flex justify-between'>
+            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Software Development <span className='hidden lg:inline-block'>- Computer Systems Technology</span></h2>
+            <p className='hidden sm:block my-auto text-sm'>September 2019 - April 2023</p>
+          </div>
+          <h3 className='text-lg my-1'>Mohawk College - Hamilton, ON, CA</h3>
+        </div>
+
+        <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden'}>
+          {/* Sheridan College */}
+          <p className='sm:hidden text-sm my-1'>September 2016 - April 2017</p>
+          <div className='flex justify-between'>
+            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Tool and Die Pre-Apprenticeship</h2>
+            <p className='hidden sm:block my-auto text-sm'>September 2016 - April 2017</p>
+          </div>
+          <h3 className='text-lg my-1'>Sheridan College - Oakville, ON, CA</h3>
         </div>
       </div>
 
