@@ -21,7 +21,7 @@ export default function NavigationBar(){
                             <a href="#about" onClick={()=>{toggleMenu()}}><li className="pl-5 md:pl-8 lg:pl-10 xl:pl-12 2xl:pl-16 py-2 hover:text-[#1D2233] hover:bg-[#BAC7CC] hover:scale-105">About Me</li></a>
                             <a href="#projects" onClick={()=>{toggleMenu()}}><li className="pl-5 md:pl-8 lg:pl-10 xl:pl-12 2xl:pl-16 py-2 hover:text-[#1D2233] hover:bg-[#BAC7CC] hover:scale-105">My Projects</li></a>
                             <a href="#skills" onClick={()=>{toggleMenu()}}><li className="pl-5 md:pl-8 lg:pl-10 xl:pl-12 2xl:pl-16 py-2 hover:text-[#1D2233] hover:bg-[#BAC7CC] hover:scale-105">My Skills</li></a>
-                            <a href="#resume" onClick={()=>{toggleMenu()}}><li className="pl-5 md:pl-8 lg:pl-10 xl:pl-12 2xl:pl-16 py-2 hover:text-[#1D2233] hover:bg-[#BAC7CC] hover:scale-105">My Resume</li></a>
+                            <a href="#experience" onClick={()=>{toggleMenu()}}><li className="pl-5 md:pl-8 lg:pl-10 xl:pl-12 2xl:pl-16 py-2 hover:text-[#1D2233] hover:bg-[#BAC7CC] hover:scale-105">My Experience</li></a>
                             <a href="#contact" onClick={()=>{toggleMenu()}}><li className="pl-5 md:pl-8 lg:pl-10 xl:pl-12 2xl:pl-16 py-2 hover:text-[#1D2233] hover:bg-[#BAC7CC] hover:scale-105">Contact Me</li></a>
                         </ul>
                     </div>

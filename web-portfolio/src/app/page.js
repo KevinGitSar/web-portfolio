@@ -24,7 +24,7 @@ export default function Home() {
               <h1 className='text-3xl'>
             <Reveal>Hi, my name is <span className='font-semibold text-[#3FAA95]'>Kevin Sar</span></Reveal></h1>
               <h1 className='text-xl mt-5'>
-            <Reveal>and I'm a <span className='font-semibold text-[#3FAA95]'>Full Stack Developer</span>.</Reveal></h1>
+            <Reveal>I'm a <span className='font-semibold text-[#3FAA95]'>Full Stack Developer</span> and I am looking to join <span className='font-semibold text-[#3FAA95]'>your team</span>!</Reveal></h1>
           </div>
 
           <div className='flex justify-between w-1/2 mx-auto py-5'>
@@ -189,7 +189,7 @@ export default function Home() {
                   <li>Application Server set-up with Linux OS.</li>
                   <li>HTTPS/SSL/DNS Configuration.</li>
                   <li>Hosted and Deployed with Digital Ocean.</li>
-                  <li>Check it out on <a href='https://kevinsar.ca/' target='_blank' className='transition ease-in-out delay-100 hover:text-[#3FAA95]'>kevinsar.ca</a>.</li>
+                  <li>Check it out on &#8594; <a href='https://kevinsar.ca/' target='_blank' className='font-semibold transition ease-in-out delay-100 hover:text-[#3FAA95]'>kevinsar.ca</a> &#8592; </li>
                 </ul>
               </Reveal>
             </div>
@@ -257,7 +257,7 @@ export default function Home() {
                   <li>React Hooks used to implement timer-countdown feature.</li>
                   <li>Teaches users about prime numbers especially why 1 is not a prime number and why 2 is a prime number.</li>
                   <li>Netlify was used to deploy the project.</li>
-                  <li>Check it out on <a href='https://prime-time-gaming.netlify.app/' className='transition ease-in-out delay-100 hover:text-[#3FAA95]'>prime-time-gaming.netlify.app</a>.</li>
+                  <li>Check it out on &#8594; <a href='https://prime-time-gaming.netlify.app/' className='font-semibold transition ease-in-out delay-100 hover:text-[#3FAA95]'>prime-time-gaming.netlify.app</a> &#8592; </li>
                 </ul>
               </Reveal>
             </div>
@@ -344,121 +344,123 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='flex'>
-          <button className={experience == 'all' ? 'px-5 py-2 w-[220px] text-[#3faa95] rounded-lg bg-[#0A0F22] border-2 border-[#3faa95]' : 'px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' } onClick={()=>{setExperience('all')}}>All</button>
+        <div className='w-full mx-auto my-10 sm:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-1/2'>
+          <div className='flex'>
+            <button className={experience == 'all' ? 'px-5 py-2 w-[220px] text-[#3faa95] rounded-lg bg-[#0A0F22] border-2 border-[#3faa95]' : 'px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' } onClick={()=>{setExperience('all')}}>All</button>
+            
+            <button className={experience == 'tech' ? 'px-5 py-2 w-[220px] text-[#3faa95] rounded-lg bg-[#0A0F22] border-2 border-[#3faa95]' : 'px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' } onClick={()=>{setExperience('tech')}}>Tech - related</button>
+            
+            <button className={experience == 'general' ? 'px-5 py-2 w-[220px] text-[#3faa95] rounded-lg bg-[#0A0F22] border-2 border-[#3faa95]' : 'px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' } onClick={()=>{setExperience('general')}}>General</button>
+          </div>
+
+          <h1 className='text-3xl ml-5 mt-10 my-4'>Employment</h1>
+
+          <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
+            {/* LPG Inventory Solutions */}
+            <p className='sm:hidden text-sm my-1'>April 2024 - Present</p>
+            <div className='flex justify-between'>
+              <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>General Labourer</h2>
+              <p className='hidden sm:block my-auto text-sm'>April 2024 - Present</p>
+            </div>
+            <h3 className='text-lg my-1'>LPG Inventory Solutions - Hamilton, ON, CA</h3>
+            <ul className='list-inside list-disc my-1'>
+              <li className='my-1'>Collecting and organizing 20+ transaction orders daily.</li>
+              <li className='my-1'>Packing and packaging medical orders.</li>
+              <li className='my-1'>Locating missing medical products.</li>
+              <li className='my-1'>Organizing, categorizing, and shelving medical products.</li>
+            </ul>
+          </div>
+
+          <div className={experience == 'all' || experience == 'tech' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
+            {/* Marlin Industrial Products Inc. */}
+            <p className='sm:hidden text-sm my-1'>January 2024 - April 2024</p>
+            <div className='flex justify-between'>
+              <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Full Stack Developer - Intern</h2>
+              <p className='hidden sm:block my-auto text-sm'>January 2024 - April 2024</p>
+            </div>
+            <h3 className='text-lg my-1'>Marlin Industrial Products Inc. - North York, ON, CA</h3>
+            <ul className='list-inside list-disc my-1'>
+              <li className='my-1'>Participated in team activities including system design planning and code reviews.</li>
+              <li className='my-1'>Writing, maintaining, and updating application code in Django.</li>
+              <li className='my-1'>Provided support and input for improving work processes for the team.</li>
+              <li className='my-1'>Conducted development unit testing using Django's built-in automated tests.</li>
+              <li className='my-1'>Developed new project features and enhanced existing functionalities.</li>
+              <li className='my-1'>Escalates issues to Senior Developer and/or Managers when required.</li>
+            </ul>
+          </div>
+
+          <div className={experience == 'all' || experience == 'tech' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
+            {/* Evenica */}
+            <p className='sm:hidden text-sm my-1'>September 2021 - January 2022</p>
+            <div className='flex justify-between'>
+              <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Junior Developer - Co-op Position</h2>
+              <p className='hidden sm:block my-auto text-sm'>September 2021 - January 2022</p>
+            </div>
+            <h3 className='text-lg my-1'>Evenica - Burlington, ON, CA</h3>
+            <ul className='list-inside list-disc my-1'>
+              <li className='my-1'>Collaborated with a team to develop e-commerce websites.</li>
+              <li className='my-1'>Tracked and organized product development with Confluence, Jira, and GIT.</li>
+              <li className='my-1'>Participated in team reviews and training by receiving and providing valuable feedback.</li>
+              <li className='my-1'>Familiar with agile methodologies as an active scrum team member.</li>
+            </ul>
+          </div>
+
+          <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
+
+            {/* Tiercon */}
+            <p className='sm:hidden text-sm my-1'>May 2017 - January 2019</p>
+            <div className='flex justify-between'>
+              <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Assembler</h2>
+              <p className='hidden sm:block my-auto text-sm'>May 2017 - January 2019</p>
+            </div>
+            <h3 className='text-lg my-1'>Tiercon Corp. - Stoney Creek, ON, CA</h3>
+            <ul className='list-inside list-disc my-1'>
+              <li className='my-1'>Contributed to the assembly line by loading/unloading manufacturer parts.</li>
+              <li className='my-1'>Proficient with organizing racks, boxes, products, and car parts.</li>
+              <li className='my-1'>Conducted thorough inspections of manufacturer products to ensure it is up to specifications.</li>
+              <li className='my-1'>Supported managers by assisting with planning and coordinating work orders and tasks.</li>
+            </ul>
+          </div>
+
+          <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
+
+            {/* Fox 40 */}
+            <p className='sm:hidden text-sm my-1'>February 2016 - August 2016</p>
+            <div className='flex justify-between'>
+              <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>General Labourer</h2>
+              <p className='hidden sm:block my-auto text-sm'>February 2016 - August 2016</p>
+            </div>
+            <h3 className='text-lg my-1'>Fox 40 International Inc. - Hamilton, ON, CA</h3>
+            <ul className='list-inside list-disc my-1'>
+              <li className='my-1'>Produced, arranged, and managed multiple work orders.</li>
+              <li className='my-1'>Contributed to loading and unloading parcels, packages, inventory, and products.</li>
+              <li className='my-1'>Proficient with boxing, taping, and packaging goods, products, and international orders.</li>
+              <li className='my-1'>Collaborated effectively to prepare and package large orders under tight deadlines.</li>
+            </ul>
+          </div>
+
           
-          <button className={experience == 'tech' ? 'px-5 py-2 w-[220px] text-[#3faa95] rounded-lg bg-[#0A0F22] border-2 border-[#3faa95]' : 'px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' } onClick={()=>{setExperience('tech')}}>Tech - related</button>
-          
-          <button className={experience == 'general' ? 'px-5 py-2 w-[220px] text-[#3faa95] rounded-lg bg-[#0A0F22] border-2 border-[#3faa95]' : 'px-5 py-2 w-[220px] rounded-lg bg-[#1D2233] border-2 border-[#0A0F22] transition ease-in-out delay-100 hover:text-[#3faa95] hover:border-[#3faa95] hover:bg-[#0A0F22]' } onClick={()=>{setExperience('general')}}>General</button>
-        </div>
+          <h1 className='text-3xl ml-5 mt-10 my-4'>Education</h1>
 
-        <h1 className='text-3xl ml-5  my-4'>Employment</h1>
-
-        <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
-          {/* LPG Inventory Solutions */}
-          <p className='sm:hidden text-sm my-1'>April 2024 - Present</p>
-          <div className='flex justify-between'>
-            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>General Labourer</h2>
-            <p className='hidden sm:block my-auto text-sm'>April 2024 - Present</p>
+          <div className={experience == 'all' || experience == 'tech' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden'}>
+            {/* Mohawk College */}
+            <p className='sm:hidden text-sm my-1'>September 2019 - April 2023</p>
+            <div className='flex justify-between'>
+              <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Software Development <span className='hidden lg:inline-block'>- Computer Systems Technology</span></h2>
+              <p className='hidden sm:block my-auto text-sm'>September 2019 - April 2023</p>
+            </div>
+            <h3 className='text-lg my-1'>Mohawk College - Hamilton, ON, CA</h3>
           </div>
-          <h3 className='text-lg my-1'>LPG Inventory Solutions - Hamilton, ON, CA</h3>
-          <ul className='list-inside list-disc my-1'>
-            <li className='my-1'>Collecting and organizing 20+ transaction orders daily.</li>
-            <li className='my-1'>Packing and packaging medical orders.</li>
-            <li className='my-1'>Locating missing medical products.</li>
-            <li className='my-1'>Organizing, categorizing, and shelving medical products.</li>
-          </ul>
-        </div>
 
-        <div className={experience == 'all' || experience == 'tech' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
-          {/* Marlin Industrial Products Inc. */}
-          <p className='sm:hidden text-sm my-1'>January 2024 - April 2024</p>
-          <div className='flex justify-between'>
-            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Full Stack Developer - Intern</h2>
-            <p className='hidden sm:block my-auto text-sm'>January 2024 - April 2024</p>
+          <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden'}>
+            {/* Sheridan College */}
+            <p className='sm:hidden text-sm my-1'>September 2016 - April 2017</p>
+            <div className='flex justify-between'>
+              <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Tool and Die Pre-Apprenticeship</h2>
+              <p className='hidden sm:block my-auto text-sm'>September 2016 - April 2017</p>
+            </div>
+            <h3 className='text-lg my-1'>Sheridan College - Oakville, ON, CA</h3>
           </div>
-          <h3 className='text-lg my-1'>Marlin Industrial Products Inc. - North York, ON, CA</h3>
-          <ul className='list-inside list-disc my-1'>
-            <li className='my-1'>Participated in team activities including system design planning and code reviews.</li>
-            <li className='my-1'>Writing, maintaining, and updating application code in Django.</li>
-            <li className='my-1'>Provided support and input for improving work processes for the team.</li>
-            <li className='my-1'>Conducted development unit testing using Django's built-in automated tests.</li>
-            <li className='my-1'>Developed new project features and enhanced existing functionalities.</li>
-            <li className='my-1'>Escalates issues to Senior Developer and/or Managers when required.</li>
-          </ul>
-        </div>
-
-        <div className={experience == 'all' || experience == 'tech' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
-          {/* Evenica */}
-          <p className='sm:hidden text-sm my-1'>September 2021 - January 2022</p>
-          <div className='flex justify-between'>
-            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Junior Developer - Co-op Position</h2>
-            <p className='hidden sm:block my-auto text-sm'>September 2021 - January 2022</p>
-          </div>
-          <h3 className='text-lg my-1'>Evenica - Burlington, ON, CA</h3>
-          <ul className='list-inside list-disc my-1'>
-            <li className='my-1'>Collaborated with a team to develop e-commerce websites.</li>
-            <li className='my-1'>Tracked and organized product development with Confluence, Jira, and GIT.</li>
-            <li className='my-1'>Participated in team reviews and training by receiving and providing valuable feedback.</li>
-            <li className='my-1'>Familiar with agile methodologies as an active scrum team member.</li>
-          </ul>
-        </div>
-
-        <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
-
-          {/* Tiercon */}
-          <p className='sm:hidden text-sm my-1'>May 2017 - January 2019</p>
-          <div className='flex justify-between'>
-            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Assembler</h2>
-            <p className='hidden sm:block my-auto text-sm'>May 2017 - January 2019</p>
-          </div>
-          <h3 className='text-lg my-1'>Tiercon Corp. - Stoney Creek, ON, CA</h3>
-          <ul className='list-inside list-disc my-1'>
-            <li className='my-1'>Contributed to the assembly line by loading/unloading manufacturer parts.</li>
-            <li className='my-1'>Proficient with organizing racks, boxes, products, and car parts.</li>
-            <li className='my-1'>Conducted thorough inspections of manufacturer products to ensure it is up to specifications.</li>
-            <li className='my-1'>Supported managers by assisting with planning and coordinating work orders and tasks.</li>
-          </ul>
-        </div>
-
-        <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden' }>
-
-          {/* Fox 40 */}
-          <p className='sm:hidden text-sm my-1'>February 2016 - August 2016</p>
-          <div className='flex justify-between'>
-            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>General Labourer</h2>
-            <p className='hidden sm:block my-auto text-sm'>February 2016 - August 2016</p>
-          </div>
-          <h3 className='text-lg my-1'>Fox 40 International Inc. - Hamilton, ON, CA</h3>
-          <ul className='list-inside list-disc my-1'>
-            <li className='my-1'>Produced, arranged, and managed multiple work orders.</li>
-            <li className='my-1'>Contributed to loading and unloading parcels, packages, inventory, and products.</li>
-            <li className='my-1'>Proficient with boxing, taping, and packaging goods, products, and international orders.</li>
-            <li className='my-1'>Collaborated effectively to prepare and package large orders under tight deadlines.</li>
-          </ul>
-        </div>
-
-        
-        <h1 className='text-3xl ml-5  my-4'>Education</h1>
-
-        <div className={experience == 'all' || experience == 'tech' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden'}>
-          {/* Mohawk College */}
-          <p className='sm:hidden text-sm my-1'>September 2019 - April 2023</p>
-          <div className='flex justify-between'>
-            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Software Development <span className='hidden lg:inline-block'>- Computer Systems Technology</span></h2>
-            <p className='hidden sm:block my-auto text-sm'>September 2019 - April 2023</p>
-          </div>
-          <h3 className='text-lg my-1'>Mohawk College - Hamilton, ON, CA</h3>
-        </div>
-
-        <div className={experience == 'all' || experience == 'general' ? 'm-1 mx-auto bg-[#1D2233] p-4 w-full' : 'hidden'}>
-          {/* Sheridan College */}
-          <p className='sm:hidden text-sm my-1'>September 2016 - April 2017</p>
-          <div className='flex justify-between'>
-            <h2 className='text-xl text-[#3FAA95] font-semibold my-1'>Tool and Die Pre-Apprenticeship</h2>
-            <p className='hidden sm:block my-auto text-sm'>September 2016 - April 2017</p>
-          </div>
-          <h3 className='text-lg my-1'>Sheridan College - Oakville, ON, CA</h3>
         </div>
       </div>
 
